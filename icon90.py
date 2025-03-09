@@ -235,7 +235,7 @@ def handle_bgmi(message):
             if time > 240:
                 response = "Error: Time interval must be less than 240."
             else:
-                record_command_logs(user_id, '/MEGOXER', target, port, time)
+                record_command_logs(user_id, target, port, time)
                 log_command(user_id, target, port, time)
                 start_attack_reply(message, target, port, time)  # Call start_attack_reply function
                 full_command = f"./megoxer {target} {port} {time} 9 900"
